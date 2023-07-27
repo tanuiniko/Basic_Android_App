@@ -35,12 +35,12 @@ class MainActivity : AppCompatActivity() {
         recyclerActivityButton=findViewById(R.id.recyclerViewButton)
 
         changeButton.setOnClickListener {
-            textView.text="Have a good day!"
+            textView.text="Let's learn together!"
             Toast.makeText(this,"Test is changed",Toast.LENGTH_LONG).show()
         }
 
         resetButton.setOnClickListener {
-            textView.text="Hello World!"
+            textView.text="Have a good day!"
             Toast.makeText(this,"Reset done",Toast.LENGTH_LONG).show()
         }
 
