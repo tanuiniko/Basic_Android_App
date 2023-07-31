@@ -33,10 +33,14 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".recyclerview.RecyclerViewActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name="com.example.greetingcard.fragments.FragmentActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
         </activity>
     </application>
 

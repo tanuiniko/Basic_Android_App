@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.greetingcard.fragments.FragmentActivity
 import com.example.greetingcard.lifecycles.SecondActivity
 import com.example.greetingcard.recyclerview.RecyclerViewActivity
 
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var resetButton : Button
     lateinit var secondActivityButton : Button
     lateinit var recyclerActivityButton : Button
+    lateinit var fragmentActivityButton : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         resetButton=findViewById(R.id.resetButton)
         secondActivityButton=findViewById(R.id.goToSecondButton)
         recyclerActivityButton=findViewById(R.id.recyclerViewButton)
+        fragmentActivityButton=findViewById(R.id.fragmentButton)
 
         changeButton.setOnClickListener {
             textView.text="Let's learn together!"
@@ -52,6 +55,11 @@ class MainActivity : AppCompatActivity() {
 
         recyclerActivityButton.setOnClickListener {
             var intent = Intent(this@MainActivity,RecyclerViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        fragmentActivityButton.setOnClickListener {
+            var intent = Intent(this@MainActivity, FragmentActivity::class.java)
             startActivity(intent)
         }
 
