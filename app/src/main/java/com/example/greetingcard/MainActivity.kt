@@ -11,6 +11,7 @@ import com.example.greetingcard.fragments.FragmentActivity
 import com.example.greetingcard.lifecycles.SecondActivity
 import com.example.greetingcard.recyclerview.RecyclerViewActivity
 import com.example.greetingcard.sharedpreferences.SharedPreferencesActivity
+import com.example.greetingcard.todolist.ToDoActivity
 
 /***
  * Intent is used to invoke another activity from this activity.
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var recyclerActivityButton : Button
     lateinit var fragmentActivityButton : Button
     lateinit var sharedPreferencesButton : Button
+    lateinit var toDoListButton : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         recyclerActivityButton=findViewById(R.id.recyclerViewButton)
         fragmentActivityButton=findViewById(R.id.fragmentButton)
         sharedPreferencesButton=findViewById(R.id.goToSPActivity)
+        toDoListButton=findViewById(R.id.goToToDoList)
 
         changeButton.setOnClickListener {
             textView.text="Let's learn together!"
@@ -68,6 +71,11 @@ class MainActivity : AppCompatActivity() {
 
         sharedPreferencesButton.setOnClickListener {
             var intent = Intent(this@MainActivity, SharedPreferencesActivity::class.java)
+            startActivity(intent)
+        }
+
+        toDoListButton.setOnClickListener {
+            var intent = Intent(this@MainActivity,ToDoActivity::class.java)
             startActivity(intent)
         }
 
