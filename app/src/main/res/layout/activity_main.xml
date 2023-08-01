@@ -14,10 +14,11 @@
         android:background="@drawable/button_shape"
         android:backgroundTint="@null"
         android:text="Go to second Activity"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/childLinearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/childLinearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/text"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/recyclerViewButton"
@@ -26,11 +27,21 @@
         android:background="@drawable/button_shape"
         android:backgroundTint="@null"
         android:text="go to recycler activity"
-        app:layout_constraintBottom_toTopOf="@+id/fragmentButton"
+        app:layout_constraintBottom_toTopOf="@+id/goToSPActivity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/goToSPActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="go to shared preferences activity"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewButton"
         app:layout_constraintVertical_bias="0.5" />
 
     <Button
@@ -42,25 +53,24 @@
         android:text="go to fragment activity"
         app:layout_constraintBottom_toTopOf="@+id/text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewButton"
+        app:layout_constraintTop_toBottomOf="@+id/goToSPActivity"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:text="Have a good day!"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/goToSecondButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/fragmentButton"
+        app:layout_constraintVertical_bias="0.5" />
 
     <LinearLayout
         android:id="@+id/childLinearLayout"
@@ -71,7 +81,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text">
+        app:layout_constraintTop_toBottomOf="@+id/goToSecondButton"
+        app:layout_constraintVertical_bias="0.5">
 
         <Button
             android:id="@+id/resetButton"
