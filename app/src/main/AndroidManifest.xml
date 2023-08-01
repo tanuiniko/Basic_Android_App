@@ -13,6 +13,14 @@
         android:theme="@style/Theme.GreetingCard"
         tools:targetApi="31">
         <activity
+            android:name=".sharedpreferences.SharedPreferencesActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".lifecycles.SecondActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity">
@@ -36,12 +44,11 @@
         <activity
             android:name=".recyclerview.RecyclerViewActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity">
-        </activity>
-        <activity android:name="com.example.greetingcard.fragments.FragmentActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name="com.example.greetingcard.fragments.FragmentActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity">
-        </activity>
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

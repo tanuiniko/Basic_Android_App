@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.greetingcard.fragments.FragmentActivity
 import com.example.greetingcard.lifecycles.SecondActivity
 import com.example.greetingcard.recyclerview.RecyclerViewActivity
+import com.example.greetingcard.sharedpreferences.SharedPreferencesActivity
 
 /***
  * Intent is used to invoke another activity from this activity.
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var secondActivityButton : Button
     lateinit var recyclerActivityButton : Button
     lateinit var fragmentActivityButton : Button
+    lateinit var sharedPreferencesButton : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         secondActivityButton=findViewById(R.id.goToSecondButton)
         recyclerActivityButton=findViewById(R.id.recyclerViewButton)
         fragmentActivityButton=findViewById(R.id.fragmentButton)
+        sharedPreferencesButton=findViewById(R.id.goToSPActivity)
 
         changeButton.setOnClickListener {
             textView.text="Let's learn together!"
@@ -60,6 +63,11 @@ class MainActivity : AppCompatActivity() {
 
         fragmentActivityButton.setOnClickListener {
             var intent = Intent(this@MainActivity, FragmentActivity::class.java)
+            startActivity(intent)
+        }
+
+        sharedPreferencesButton.setOnClickListener {
+            var intent = Intent(this@MainActivity, SharedPreferencesActivity::class.java)
             startActivity(intent)
         }
 
