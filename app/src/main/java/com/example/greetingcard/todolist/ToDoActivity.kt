@@ -42,9 +42,9 @@ class ToDoActivity : AppCompatActivity() {
                 .setTitle("Delete")
                 .setMessage("Do you want to delete this item from the list?")
                 .setCancelable(false)
-                .setNegativeButton("No",DialogInterface.OnClickListener { dialog, which ->
+                .setNegativeButton("No") { dialog, which ->
                     dialog.cancel()
-                })
+                }
                 .setPositiveButton("Yes",DialogInterface.OnClickListener { dialog, which ->
                     itemList.removeAt(position)
                     adapter.notifyDataSetChanged()
