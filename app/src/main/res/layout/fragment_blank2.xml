@@ -7,13 +7,33 @@
     tools:context=".fragments.BlankFragment2">
 
     <TextView
+        android:id="@+id/textViewFrag2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:text="Fragment 2"
-        android:textStyle="bold"
+        android:textColor="@color/black"
         android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextFrag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
-        android:textColor="@color/black"/>
+        android:ems="15"
+        android:hint="Enter data here....."
+        android:inputType="textPersonName"
+        android:paddingStart="5dp" />
+
+    <Button
+        android:id="@+id/buttonFrag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/editTextFrag2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="send data to fragment 1" />
 
 </RelativeLayout>

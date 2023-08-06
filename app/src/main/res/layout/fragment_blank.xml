@@ -8,13 +8,33 @@
 
 
     <TextView
+        android:id="@+id/textViewFrag1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:text="Fragment 1"
-        android:textStyle="bold"
+        android:textColor="@color/black"
         android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextFragment1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
-        android:textColor="@color/black"/>
+        android:ems="15"
+        android:hint="Enter the data here...."
+        android:inputType="textPersonName"
+        android:paddingStart="5dp" />
+
+    <Button
+        android:id="@+id/buttonFrag1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/editTextFragment1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="send data to fragment 2" />
 
 </RelativeLayout>
